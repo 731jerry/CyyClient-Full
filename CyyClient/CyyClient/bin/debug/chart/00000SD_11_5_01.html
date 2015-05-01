@@ -1,0 +1,4191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+            <html lang="en">
+            <head>
+	            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	            <style type="text/css">
+	            .headfoot{
+		            background-color:rgb(245,234,190);
+		            font:normal 20px arial,sans-serif;
+	            }
+	
+	            table, tr, td{ 
+		            border-collapse: collapse;
+		            border:1px solid black;
+	            }
+	
+	            td{
+		            height: 32px;
+	            }
+	
+	            .middledata{
+		            background-color:rgb(249,242,223);
+	            }
+	            .redballfont{
+		            color:red;
+	            }
+                        .clk{
+					        background-color:red;
+				        }
+				
+				        .unclk{
+					
+				        }
+
+ td.grayfont{
+					                        color:gray;
+				                        }
+	
+                .noneball{
+                    background-image: url(image/ball_black.png);
+		            background-repeat: no-repeat;
+		            color: white;
+		            font-weight: bold;
+                    background-position:center center;
+                }                
+
+                td.equalwidth{
+				    width: 32px;
+			    }  
+
+                        
+	            .redball{
+		            background-image: url(image/ball_red.png);
+		            background-repeat: no-repeat;
+		            color: white;
+		            font-weight: bold;
+                    background-position:center center;
+	            }
+	            </style>
+	            <script type="text/javascript" src="jq142.js"></script>
+	            <script type="text/javascript" src="drawline.js"></script>
+                <script type="text/javascript">
+					$(document).ready(function()
+					{
+            document.title ="unclk";
+					  $("td.unclk").click(
+						function()
+						{
+							if ($(this).hasClass("clk"))
+							{
+								$(this).removeClass("clk");
+                                    document.title ="clk";
+							}
+							else if ($("td.clk").length < 5)
+							{
+								$(this).addClass("clk");
+                                document.title ="clk";
+							}				
+						});
+					});
+				</script>
+
+	            <title>CyyChart</title>
+            </head>
+            <body>
+	            <table style="width: 1020px; text-align:center; margin:auto;">
+		            <tr class="headfoot">
+			            <td rowspan="2" style = "width:10%">期号</td>
+			            <td rowspan="2" colspan="5" style="width:15%">开奖号码</td>
+			            <td colspan="11" style="width:30%">开奖号码走势图</td>
+			            <td rowspan="2">落码(个)</td>
+			            <td rowspan="2">连号(个)</td>
+			            <td rowspan="2">前后比例</td>
+			            <td rowspan="2">大小比例</td>
+			            <td rowspan="2">奇偶比例</td>
+			            <td rowspan="2">平衡指数</td>
+			            <td rowspan="2">连号轨迹</td>
+		            </tr>
+		
+		            <tr class="headfoot">
+			            <td class="equalwidth">01</td>
+			            <td class="equalwidth">02</td>
+			            <td class="equalwidth">03</td>
+			            <td class="equalwidth">04</td>
+			            <td class="equalwidth">05</td>
+			            <td class="equalwidth">06</td>
+			            <td class="equalwidth">07</td>
+			            <td class="equalwidth">08</td>
+			            <td class="equalwidth">09</td>
+			            <td class="equalwidth">10</td>
+			            <td class="equalwidth">11</td>
+		    </tr>
+                    <tr>
+			            <td>13090907</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">0</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090908</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">1</td>
+			            <td>2</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>=</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090909</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">1:4</td>
+			            <td>4:1</td>
+			            <td class="middledata">4:1</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090910</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090911</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">1</td>
+			            <td>2</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">1:4</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090912</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>1</td>
+			            <td class="middledata">1:3</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090913</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">1</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090914</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">1</td>
+			            <td>3</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090915</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">3</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">4:1</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090916</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">4</td>
+			            <td class="middledata">1</td>
+			            <td>3</td>
+			            <td class="middledata">4:1</td>
+			            <td>1:4</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090917</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">5</td>
+			            <td class="middledata">3</td>
+			            <td>3</td>
+			            <td class="middledata">4:1</td>
+			            <td>1:4</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090918</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">6</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090919</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>3</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090920</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090921</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">6</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">3</td>
+			            <td>1</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090922</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">7</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090923</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">8</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090924</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">1</td>
+			            <td>3</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090925</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">1:3</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090926</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">3</td>
+			            <td class="middledata">4</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090927</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">4</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090928</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">1</td>
+			            <td>2</td>
+			            <td class="middledata">1:4</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090929</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">1:3</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090930</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">6</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090931</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="middledata">2</td>
+			            <td>4</td>
+			            <td class="middledata">4:0</td>
+			            <td>1:4</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090932</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">4</td>
+			            <td class="middledata">2</td>
+			            <td>0</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">1:4</td>
+			            <td>=</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090933</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">5</td>
+			            <td class="middledata">2</td>
+			            <td>0</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090934</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">6</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090935</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>3</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090936</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090937</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>3</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090938</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">2</td>
+			            <td>4</td>
+			            <td class="middledata">0:4</td>
+			            <td>5:0</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090939</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090940</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">4:1</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090941</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090942</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">3</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">4:1</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090943</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>0</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090944</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">6</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090945</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">1</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090946</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">1</td>
+			            <td>2</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090947</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090948</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090949</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090950</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">6</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>3</td>
+			            <td class="middledata">1:3</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090951</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">6</td>
+			            <td class="grayfont">7</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>1</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090952</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">8</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">4</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090953</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">3</td>
+			            <td>3</td>
+			            <td class="middledata">4:1</td>
+			            <td>1:4</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090954</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090955</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">1</td>
+			            <td>3</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090956</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">3</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">4:1</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090957</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">1</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090958</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>3</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090959</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090960</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="grayfont">6</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090961</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">4:1</td>
+			            <td>1:4</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090962</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">4</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090963</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090964</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">1:3</td>
+			            <td>4:1</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090965</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">3</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">1:3</td>
+			            <td>4:1</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090966</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>1</td>
+			            <td class="middledata">1:3</td>
+			            <td>4:1</td>
+			            <td class="middledata">1:4</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090967</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090968</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">4</td>
+			            <td>3</td>
+			            <td class="middledata">4:0</td>
+			            <td>1:4</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090969</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>1</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090970</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">6</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">4</td>
+			            <td>2</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090971</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090972</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">6</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>0</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">5:0</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090973</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">7</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090974</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">8</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090975</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">9</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090976</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">1</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090977</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">1:3</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13090978</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">1:4</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091001</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">4</td>
+			            <td>2</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>=</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091002</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">1</td>
+			            <td>2</td>
+			            <td class="middledata">4:1</td>
+			            <td>1:4</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091003</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">6</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091004</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">7</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">3</td>
+			            <td class="middledata">4</td>
+			            <td>3</td>
+			            <td class="middledata">4:1</td>
+			            <td>1:4</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091005</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">8</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">4</td>
+			            <td class="middledata">4</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091006</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">9</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">5</td>
+			            <td class="middledata">3</td>
+			            <td>1</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">1:4</td>
+			            <td>=</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091007</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">4</td>
+			            <td>1</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">1:4</td>
+			            <td>=</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091008</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">11</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091009</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>3</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091010</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">1</td>
+			            <td>3</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091011</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091012</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">1:4</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091013</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091014</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091015</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">3</td>
+			            <td>3</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091016</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">3</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091017</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">6</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">4</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091018</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">5</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091019</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">1:4</td>
+			            <td>4:1</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091020</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>0</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">4:1</td>
+			            <td>-</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091021</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091022</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">6</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">4</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091023</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091024</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">1:3</td>
+			            <td>4:1</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091025</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091026</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091027</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>=</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091028</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">3</td>
+			            <td>3</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>=</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091029</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>0</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>=</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091030</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091031</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">6</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>1</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091032</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>3</td>
+			            <td class="middledata">0:4</td>
+			            <td>5:0</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091033</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">1</td>
+			            <td>4</td>
+			            <td class="middledata">4:0</td>
+			            <td>1:4</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091034</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">6</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091035</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">7</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">3</td>
+			            <td class="middledata">2</td>
+			            <td>0</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091036</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">8</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">4</td>
+			            <td class="middledata">2</td>
+			            <td>3</td>
+			            <td class="middledata">4:0</td>
+			            <td>1:4</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091037</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">9</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">1</td>
+			            <td>3</td>
+			            <td class="middledata">1:4</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091038</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>3</td>
+			            <td class="middledata">4:1</td>
+			            <td>1:4</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091039</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">11</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>3</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091040</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">12</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091041</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091042</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">6</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091043</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">7</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">1:4</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091044</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091045</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091046</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">6</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>0</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">5:0</td>
+			            <td>-</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091047</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">6</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">1:4</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091048</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">7</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">1:3</td>
+			            <td>4:1</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091049</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">8</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091050</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">9</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091051</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091052</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">11</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>3</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091053</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:1</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091054</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091055</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">3</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091056</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091057</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">4:1</td>
+			            <td>=</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091058</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>=</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091059</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091060</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>=</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091061</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>=</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091062</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">5</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">1:4</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091063</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="middledata">3</td>
+			            <td>3</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091064</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">4</td>
+			            <td class="middledata">3</td>
+			            <td>3</td>
+			            <td class="middledata">1:3</td>
+			            <td>4:1</td>
+			            <td class="middledata">2:3</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091065</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091066</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">3</td>
+			            <td>0</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">5:0</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091067</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">5</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">3</td>
+			            <td>3</td>
+			            <td class="middledata">1:4</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091068</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">6</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="middledata">2</td>
+			            <td>3</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>=</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091069</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">7</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">1:4</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091070</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">8</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>3</td>
+			            <td class="middledata">1:3</td>
+			            <td>4:1</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091071</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="grayfont">4</td>
+			            <td class="grayfont">9</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="middledata">2</td>
+			            <td>3</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091072</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">3</td>
+			            <td class="middledata">2</td>
+			            <td>1</td>
+			            <td class="middledata">2:3</td>
+			            <td>3:2</td>
+			            <td class="middledata">3:2</td>
+			            <td>-</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091073</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="redball">01</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">09</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">4</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">4:1</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091074</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">02</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">3</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">06</td>
+			            <td class="redball">07</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">5</td>
+			            <td class="middledata">3</td>
+			            <td>3</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>=</td>
+			            <td class="middledata">-</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091075</td>
+			            <td class="middledata redballfont equalwidth">08</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">03</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">08</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">6</td>
+			            <td class="middledata">2</td>
+			            <td>0</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091076</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">07</td>
+			            <td class="middledata redballfont equalwidth">01</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="redball">01</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">07</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">7</td>
+			            <td class="middledata">3</td>
+			            <td>1</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">3:2</td>
+			            <td>+</td>
+			            <td class="middledata">+</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091077</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="middledata redballfont equalwidth">06</td>
+			            <td class="middledata redballfont equalwidth">03</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">11</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">03</td>
+			            <td class="redball">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">06</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">4</td>
+			            <td class="redball">10</td>
+			            <td class="redball">11</td>
+			            <td class="middledata">3</td>
+			            <td>2</td>
+			            <td class="middledata">2:2</td>
+			            <td>3:2</td>
+			            <td class="middledata">2:3</td>
+			            <td>=</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+                    <tr>
+			            <td>13091078</td>
+			            <td class="middledata redballfont equalwidth">09</td>
+			            <td class="middledata redballfont equalwidth">05</td>
+			            <td class="middledata redballfont equalwidth">10</td>
+			            <td class="middledata redballfont equalwidth">02</td>
+			            <td class="middledata redballfont equalwidth">04</td>
+			            <td class="grayfont">2</td>
+			            <td class="redball">02</td>
+			            <td class="grayfont">1</td>
+			            <td class="redball">04</td>
+			            <td class="redball">05</td>
+			            <td class="grayfont">1</td>
+			            <td class="grayfont">2</td>
+			            <td class="grayfont">3</td>
+			            <td class="redball">09</td>
+			            <td class="redball">10</td>
+			            <td class="grayfont">1</td>
+			            <td class="middledata">2</td>
+			            <td>2</td>
+			            <td class="middledata">3:2</td>
+			            <td>2:3</td>
+			            <td class="middledata">2:3</td>
+			            <td>+</td>
+			            <td class="middledata">=</td>
+		                </tr>
+                           
+		            <tr class="headfoot">
+			            <td rowspan="2" colspan="6">
+				            <input type="button" value="提交选择" />
+			            </td>
+			            <td class="unclk">01</td>
+			            <td class="unclk">02</td>
+			            <td class="unclk">03</td>
+			            <td class="unclk">04</td>
+			            <td class="unclk">05</td>
+			            <td class="unclk">06</td>
+			            <td class="unclk">07</td>
+			            <td class="unclk">08</td>
+			            <td class="unclk">09</td>
+			            <td class="unclk">10</td>
+			            <td class="unclk">11</td>
+			            <td rowspan="2">落码(个)</td>
+			            <td rowspan="2">连号(个)</td>
+			            <td rowspan="2">前后比例</td>
+			            <td rowspan="2">大小比例</td>
+			            <td rowspan="2">奇偶比例</td>
+			            <td rowspan="2">平衡指数</td>
+			            <td rowspan="2">连号轨迹</td>
+		            </tr>
+		            <tr class="headfoot">
+			            <td colspan="11">开奖号码走势图</td>
+		            </tr>
+	            </table>
+            </body>
+            </html>
+            

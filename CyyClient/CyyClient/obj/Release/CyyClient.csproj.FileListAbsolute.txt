@@ -1,0 +1,12 @@
+E:\Download\CyyClient-revised\CyyClient\CyyClient\bin\Release\CyyClient.exe.config
+E:\Download\CyyClient-revised\CyyClient\CyyClient\bin\Release\CyyClient.exe
+E:\Download\CyyClient-revised\CyyClient\CyyClient\bin\Release\CyyClient.pdb
+E:\Download\CyyClient-revised\CyyClient\CyyClient\obj\Release\CyyClient.CyyLogin.resources
+E:\Download\CyyClient-revised\CyyClient\CyyClient\obj\Release\CyyClient.CyyMain.resources
+E:\Download\CyyClient-revised\CyyClient\CyyClient\obj\Release\CyyClient.FinalBox.resources
+E:\Download\CyyClient-revised\CyyClient\CyyClient\obj\Release\CyyClient.Properties.Resources.resources
+E:\Download\CyyClient-revised\CyyClient\CyyClient\obj\Release\CyyClient.csproj.GenerateResource.Cache
+E:\Download\CyyClient-revised\CyyClient\CyyClient\obj\Release\CyyClient.exe
+E:\Download\CyyClient-revised\CyyClient\CyyClient\obj\Release\CyyClient.pdb
+E:\Download\CyyClient-revised\CyyClient\CyyClient\obj\Release\CyyClient.csprojResolveAssemblyReference.cache
+E:\Download\CyyClient-revised\CyyClient\CyyClient\obj\Release\CyyClient.UserLicense.resources

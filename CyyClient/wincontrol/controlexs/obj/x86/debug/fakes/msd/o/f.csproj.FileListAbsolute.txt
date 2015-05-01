@@ -1,0 +1,7 @@
+E:\Source\cyy\CyyClient0507\CyyClient\WinControl\ControlExs\obj\x86\Debug\Fakes\msd\b\MySql.Data.6.8.3.0.Fakes.xml
+E:\Source\cyy\CyyClient0507\CyyClient\WinControl\ControlExs\obj\x86\Debug\Fakes\msd\b\MySql.Data.6.8.3.0.Fakes.dll
+E:\Source\cyy\CyyClient0507\CyyClient\WinControl\ControlExs\obj\x86\Debug\Fakes\msd\b\MySql.Data.6.8.3.0.Fakes.pdb
+E:\Source\cyy\CyyClient0507\CyyClient\WinControl\ControlExs\obj\x86\Debug\Fakes\msd\b\Microsoft.QualityTools.Testing.Fakes.dll
+E:\Source\cyy\CyyClient0507\CyyClient\WinControl\ControlExs\obj\x86\Debug\Fakes\msd\o\f.csprojResolveAssemblyReference.cache
+E:\Source\cyy\CyyClient0507\CyyClient\WinControl\ControlExs\obj\x86\Debug\Fakes\msd\o\MySql.Data.6.8.3.0.Fakes.dll
+E:\Source\cyy\CyyClient0507\CyyClient\WinControl\ControlExs\obj\x86\Debug\Fakes\msd\o\MySql.Data.6.8.3.0.Fakes.pdb
